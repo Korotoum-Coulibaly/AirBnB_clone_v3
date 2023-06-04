@@ -119,3 +119,11 @@ class TestFileStorage(unittest.TestCase):
     state = State(name="California")
     state.save()
     self.assertIs(state, storage.get(State, state.id))
+
+    def test_count(self)
+    """Test that count all objects"""
+    initialCount = storage.count()
+    state = State(name="California")
+    state.save()
+    self.assertEqual(storage.count(), initialCount + 1)
+

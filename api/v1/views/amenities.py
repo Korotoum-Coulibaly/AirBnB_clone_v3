@@ -20,8 +20,7 @@ def list_amenities():
 def get_amenity(amenity_id):
     """Gets an Amenity object"""
     all_amenities = storage.all("Amenity").values()
-    amenity_object = [obj.to_dict() for obj in all_amenities
-                   if obj.id == amenity_id]
+    amenity_object = [obj.to_dict() for obj in all_amenities if obj.id == amenity_id]
     if amenity_object == []:
         abort(404)
     return jsonify(amenity_object[0])
@@ -31,8 +30,7 @@ def get_amenity(amenity_id):
 def delete_amenity(amenity_id):
     """Deletes Amenity object"""
     all_amenities = storage.all("Amenity").values()
-    amenity_object = [obj.to_dict() for obj in all_amenities
-                   if obj.id == amenity_id]
+    amenity_object = [obj.to_dict() for obj in all_amenities if obj.id == amenity_id]
     if amenity_object == []:
         abort(404)
     amenity_object.remove(amenity_object[0])
@@ -62,8 +60,7 @@ def create_amenity():
 def updates_amenity(amenity_id):
     """Updates Amenity object"""
     all_amenities = storage.all("Amenity").values()
-    amenity_object = [obj.to_dict() for obj in all_amenities
-                   if obj.id == amenity_id]
+    amenity_object = [obj.to_dict() for obj in all_amenities if obj.id == amenity_id]
     if amenity_object == []:
         abort(404)
     if not request.get_json():

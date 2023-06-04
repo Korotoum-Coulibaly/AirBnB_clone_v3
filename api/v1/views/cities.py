@@ -83,5 +83,3 @@ def updates_city(city_id):
             obj.name = request.json['name']
     storage.save()
     return jsonify(city_obj[0]), 200
-
-    

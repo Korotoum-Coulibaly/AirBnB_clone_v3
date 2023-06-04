@@ -14,7 +14,7 @@ app.url_map.strict_slashes = False
 app.register_blueprint(app_views)
 
 @app.teardown_appcontext
-def tear(self)
+def tear(self):
     """Close storage"""
     storage.close()
 

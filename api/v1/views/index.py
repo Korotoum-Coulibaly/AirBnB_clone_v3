@@ -20,6 +20,6 @@ def count():
     """endpoint that retrieves the number of each objects by type"""
     countDict = {}
     for cls in classes:
-        countDict[cls] = storage.count(classes[cls])
-        return jsonify(countDict)
+    countDict[cls] = storage.count(classes[cls])
+    return jsonify(countDict)
 

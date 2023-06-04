@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """import app views"""
-
 from api.v1.views import app_views
 from flask import jsonify
 from models import storage
@@ -28,6 +27,6 @@ def count():
     """endpoint that retrieves the number of each objects by type"""
     countDict = {}
     for cls in classes:
-    countDict[cls] = storage.count(classes[cls])
-    return jsonify(countDict)
+        countDict[cls] = storage.count(classes[cls])
+        return jsonify(countDict)
 

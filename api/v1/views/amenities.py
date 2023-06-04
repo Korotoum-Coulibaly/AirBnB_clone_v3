@@ -60,7 +60,8 @@ def create_amenity():
 def updates_amenity(amenity_id):
     """Updates Amenity object"""
     all_amenities = storage.all("Amenity").values()
-    amenity_object = [obj.to_dict() for obj in all_amenities if obj.id == amenity_id]
+    amenity_object = [obj.to_dict() for obj in all_amenities 
+    if obj.id == amenity_id]
     if amenity_object == []:
         abort(404)
     if not request.get_json():

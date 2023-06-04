@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """APP instance of Flask"""
 
-from flask import Falsk, make_response, jsonify
+from flask import Flask, make_response, jsonify
 from models import storage
 from api.v1.views import app_views
 from os import getenv
@@ -33,4 +33,4 @@ if __name__ == '__main__':
         HBNB_API_PORT = 5000
     else:
         HBNB_API_PORT = int(getenv("HBNB_API_PORT"))
-    app.run(host=HBNB_API_HOST, port=HBNB_API_PORT, threaded=True)
+    app.run(host=HBNB_API_HOST, port=HBNB_API_PORT, threaded=Truei)
